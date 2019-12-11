@@ -1,11 +1,12 @@
 // src/gallery.component.js file
 
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Image, ScrollView } from 'react-native';
 
 import styles from './styles';
 
-export default ({captures=[]}) => (
+export default function Gallergy ({captures=[]}) {
+  return (
     <ScrollView
         horizontal={true}
         style={[styles.bottomToolbar, styles.galleryContainer]}
@@ -16,4 +17,4 @@ export default ({captures=[]}) => (
             </View>
         ))}
     </ScrollView>
-);
+)};
